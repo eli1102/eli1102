@@ -61,14 +61,38 @@
             <Columns>
                 <asp:HyperLinkField DataTextField="infoTitle" HeaderText="标题" DataNavigateUrlFormatString="信息查看.aspx?ID={0}" DataNavigateUrlFields="infoID" HeaderStyle-Height="30px" ItemStyle-Height="30px" >
                 <ControlStyle Font-Overline="False" Font-Underline="True" />
+
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
                 </asp:HyperLinkField>
-                <asp:BoundField DataField="infoDATE" HeaderText="时间" HeaderStyle-Height="30px" ItemStyle-Height="30px"/>
-                <asp:BoundField DataField="infoFrom" HeaderText="发件人" HeaderStyle-Height="30px" ItemStyle-Height="30px" />
-                <asp:BoundField DataField="infoTo" HeaderText="收件人"  HeaderStyle-Height="30px" ItemStyle-Height="30px"/>
-                <asp:CommandField HeaderText="删除" ShowDeleteButton="True" HeaderStyle-Height="30px" ItemStyle-Height="30px" />
-                <asp:HyperLinkField HeaderText="编辑" Text="编辑" DataNavigateUrlFormatString="信息修改.aspx?ID={0}" DataNavigateUrlFields="infoID" HeaderStyle-Height="30px" ItemStyle-Height="30px">
+                <asp:BoundField DataField="infoDATE" HeaderText="时间" HeaderStyle-Height="30px" ItemStyle-Height="30px">
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                </asp:BoundField>
+                <asp:BoundField DataField="infoFrom" HeaderText="发件人" HeaderStyle-Height="30px" ItemStyle-Height="30px" >
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                </asp:BoundField>
+                <asp:BoundField DataField="infoTo" HeaderText="收件人"  HeaderStyle-Height="30px" ItemStyle-Height="30px">
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                </asp:BoundField>
+                <asp:CommandField HeaderText="删除" ShowDeleteButton="True" HeaderStyle-Height="30px" ItemStyle-Height="30px" >
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                </asp:CommandField>
+                <asp:HyperLinkField HeaderText="编辑" Text="编辑" HeaderStyle-Height="30px" ItemStyle-Height="30px">
                 <ControlStyle Font-Underline="True" />
                 <FooterStyle Font-Underline="False" />
+
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
                 </asp:HyperLinkField>
             </Columns>
             <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />

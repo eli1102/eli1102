@@ -79,23 +79,67 @@
     </div>
             <div id="divPrint" runat="server">
             <div class="form-group">
-                    <asp:GridView ID="GridView1" CssClass="table table-hover" runat="server" AutoGenerateColumns="false" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" AllowSorting="True" OnRowDataBound="GridView1_RowDataBound" Width="850px" AllowPaging="True"  OnRowDeleting="GridView1_RowDeleting" OnRowCreated="GridView1_RowCreated" HorizontalAlign="Center" >                     
+                    <asp:GridView ID="GridView1" CssClass="table table-hover" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" AllowSorting="True" OnRowDataBound="GridView1_RowDataBound" Width="850px" AllowPaging="True"  OnRowDeleting="GridView1_RowDeleting" OnRowCreated="GridView1_RowCreated" HorizontalAlign="Center" >                     
                           <Columns>                            
-                            <asp:BoundField DataField="benfactorFrom" HeaderText="受助人来源" HeaderStyle-Height="30px" ItemStyle-Height="30px" />
-                            <asp:HyperLinkField DataTextField="recipientsName" HeaderText="姓名" HeaderStyle-Height="30px" ItemStyle-Height="30px" DataNavigateUrlFormatString="查看受助人信息.aspx?ID={0}" DataNavigateUrlFields="recipientsID">
+                            <asp:BoundField DataField="benfactorFrom" HeaderText="受助人来源" HeaderStyle-Height="30px" ItemStyle-Height="30px" >
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                              </asp:BoundField>
+                            <asp:HyperLinkField DataTextField="recipientsName" HeaderText="姓名" HeaderStyle-Height="30px" ItemStyle-Height="30px">
                             <ControlStyle Font-Underline="True" />
+
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
                             </asp:HyperLinkField>
-                            <asp:BoundField DataField="sex" HeaderText="性别" HeaderStyle-Height="30px" ItemStyle-Height="30px"/>
-                            <asp:BoundField DataField="newAge" HeaderText="年龄" HeaderStyle-Height="30px" ItemStyle-Height="30px"/>
-                            <asp:BoundField DataField="reason" HeaderText="致困原因"  HeaderStyle-Height="30px" ItemStyle-Height="30px"/>
-                            <asp:BoundField HeaderText="受助类别" DataField="leibie" HeaderStyle-Height="30px" ItemStyle-Height="30px"/>
-                            <asp:BoundField DataField="telphoneADD" HeaderText="联系电话" HeaderStyle-Height="30px" ItemStyle-Height="30px" />
-                            <asp:BoundField DataField="recipientsPIdcard" HeaderText="身份证号" HeaderStyle-Height="30px" ItemStyle-Height="30px"/>
-                            <asp:BoundField DataField="incomlowID" HeaderText="低保低收入号"  HeaderStyle-Height="30px" ItemStyle-Height="30px"/>
+                            <asp:BoundField DataField="sex" HeaderText="性别" HeaderStyle-Height="30px" ItemStyle-Height="30px">
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                              </asp:BoundField>
+                            <asp:BoundField DataField="newAge" HeaderText="年龄" HeaderStyle-Height="30px" ItemStyle-Height="30px">
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                              </asp:BoundField>
+                            <asp:BoundField DataField="reason" HeaderText="致困原因"  HeaderStyle-Height="30px" ItemStyle-Height="30px">
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                              </asp:BoundField>
+                            <asp:BoundField HeaderText="受助类别" DataField="leibie" HeaderStyle-Height="30px" ItemStyle-Height="30px">
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                              </asp:BoundField>
+                            <asp:BoundField DataField="telphoneADD" HeaderText="联系电话" HeaderStyle-Height="30px" ItemStyle-Height="30px" >
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                              </asp:BoundField>
+                            <asp:BoundField DataField="recipientsPIdcard" HeaderText="身份证号" HeaderStyle-Height="30px" ItemStyle-Height="30px">
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                              </asp:BoundField>
+                            <asp:BoundField DataField="incomlowID" HeaderText="低保低收入号"  HeaderStyle-Height="30px" ItemStyle-Height="30px">
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                              </asp:BoundField>
                             <asp:HyperLinkField HeaderText="编辑" Text="编辑" HeaderStyle-Height="30px" ItemStyle-Height="30px" DataNavigateUrlFormatString="修改受助人信息.aspx?ID={0}" DataNavigateUrlFields="recipientsID">
                             <ControlStyle Font-Underline="True" />
+
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
                             </asp:HyperLinkField>
-                            <asp:CommandField HeaderText="删除" ShowDeleteButton="True"  HeaderStyle-Height="30px" ItemStyle-Height="30px"/>
+                            <asp:CommandField HeaderText="删除" ShowDeleteButton="True"  HeaderStyle-Height="30px" ItemStyle-Height="30px">
+<HeaderStyle Height="30px"></HeaderStyle>
+
+<ItemStyle Height="30px"></ItemStyle>
+                              </asp:CommandField>
                         </Columns>
                         <FooterStyle BackColor="#FFFFCC" ForeColor="#330099"  />
                         <HeaderStyle BackColor="#ce2c27" Font-Bold="True" ForeColor="#FFFFCC" CssClass="text-center" Height="30px" />

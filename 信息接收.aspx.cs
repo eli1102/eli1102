@@ -76,7 +76,7 @@ public partial class Basic201512_信息接收 : System.Web.UI.Page
         {
                 ID = GridView1.DataKeys[i].Value.ToString();
                 //GridView1.Rows[i].Attributes.Add("onclick", "window.open('信息修改.aspx?ID=" + ID + "','信息修改','')");
-                ((HyperLink)GridView1.Rows[i].Cells[0].Controls[0]).Attributes.Add("onclick", "window.showModalDialog('信息查看.aspx?ID=" + ID + "','信息查看','toolbar=yes,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=300')");
+                //((HyperLink)GridView1.Rows[i].Cells[0].Controls[0]).Attributes.Add("onclick", "window.showModalDialog('信息查看.aspx?ID=" + ID + "','信息查看','toolbar=yes,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=300')");
                 if (Session["UserName"].ToString() != GridView1.Rows[i].Cells[2].Text.ToString())
                 {
                     //HttpContext.Current.Response.Write("<script>alert('只有寄件人可以编辑信息');</script>");

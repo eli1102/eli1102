@@ -73,7 +73,7 @@
              <asp:Button ID="Button4" runat="server" Text="下载文件" onclick="Button4_Click"  Height="40px" Width="109px" class="btn btn-danger"/>
           </div>
           </div>
-           <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="关闭" Height="40px" Width="109px" class="btn btn-danger" />
+           <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="返回" Height="40px" Width="109px" class="btn btn-danger" />
     </form>
         </center>
 </body>
