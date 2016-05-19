@@ -103,7 +103,7 @@ public partial class Basic201512_信息查看 : System.Web.UI.Page
 
     protected void Button1_Click1(object sender, EventArgs e)
     {
-        Response.Redirect("信息接收.aspx");// 会弹出询问是否关闭
+        Response.Redirect("信息接收.aspx");
     }
 
     protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)

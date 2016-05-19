@@ -171,16 +171,16 @@
                         <td class="auto-style9">
 
 <%--                            <asp:CheckBox ID="Chboxgongyi" runat="server" AutoPostBack="true" OnCheckedChanged="Chboxgongyi_CheckedChanged" Text="公益组织" />
-                            <asp:CheckBox ID="Chboxfaren" runat="server" AutoPostBack="True" OnCheckedChanged="Chboxfaren_CheckedChanged" Text="法人" />
-                            <asp:CheckBox ID="Chboxziran" runat="server" AutoPostBack="True" OnCheckedChanged="Chboxziran_CheckedChanged" Text="自然人" />
+                            <asp:CheckBox ID="Chboxfaren" runat="server" AutoPostBack="True" OnCheckedChanged="Chboxfaren_CheckedChanged" Text="单位" />
+                            <asp:CheckBox ID="Chboxziran" runat="server" AutoPostBack="True" OnCheckedChanged="Chboxziran_CheckedChanged" Text="个人" />
                             <asp:CheckBox ID="Chboxmojuan" runat="server" AutoPostBack="True" OnCheckedChanged="Chboxmojuan_CheckedChanged" Text="募捐箱" />
-                            <asp:CheckBox ID="Chboxguanming" runat="server" AutoPostBack="True" OnCheckedChanged="Chboxguanming_CheckedChanged" Text="冠名捐助金" />--%>
+                            <asp:CheckBox ID="Chboxguanming" runat="server" AutoPostBack="True" OnCheckedChanged="Chboxguanming_CheckedChanged" Text="冠名慈善捐助金" />--%>
                             <asp:DropDownList ID="benfactorType" runat="server" >
                                 <asp:ListItem Value="1">公益组织</asp:ListItem>
-                                <asp:ListItem Value="2">法人</asp:ListItem>
-                                <asp:ListItem Value="3">自然人</asp:ListItem>
+                                <asp:ListItem Value="2">单位</asp:ListItem>
+                                <asp:ListItem Value="3">个人</asp:ListItem>
                                 <asp:ListItem Value="4">募捐箱</asp:ListItem>
-                                <asp:ListItem Value="5">冠名捐助金</asp:ListItem>
+                                <asp:ListItem Value="5">冠名慈善捐助金</asp:ListItem>
                             </asp:DropDownList>
                         </td>
                         
@@ -355,7 +355,7 @@
 
                     </td>
                     <td class="auto-style14">
-                        <asp:Label ID="lb61" runat="server" Text="冠名捐助金名称"></asp:Label>
+                        <asp:Label ID="lb61" runat="server" Text="冠名慈善捐助金名称"></asp:Label>
                         ：&nbsp;&nbsp;&nbsp;
                     </td>
                     <td class="auto-style9">

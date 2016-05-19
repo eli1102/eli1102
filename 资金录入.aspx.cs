@@ -245,6 +245,7 @@ public partial class Basic201512_受助人 : System.Web.UI.Page
             if (result > 0)
             {
                 HttpContext.Current.Response.Write("<script>alert('金额确认成功');</script>");
+                //lblError.Text = "金额确认成功";
                 confirmRoad();
             }
         }

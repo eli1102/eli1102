@@ -355,32 +355,32 @@ namespace CL.Utility.Web.BasicData
         #region "提交项目申请"
         protected void submit1_Click(object sender, EventArgs e)
         {
-            if (LbproID.Text.Trim() == "")
+            if (LbproID.Text.Trim()=="")
             {
                 labError.Text = "请获取项目ID";
                 return;
             }
-            if (recipientsType.SelectedValue == "请选择")
+            if (recipientsType.SelectedValue=="请选择")
             {
                 labError.Text = "请选择项目类别";
                 return;
             }
-            if (projectID.Text.Length <= 0)
+            if (projectID.Text.Trim().Length <= 0)
             {
                 labError.Text = "项目名称不能为空";
                 return;
             }
-            if (projectDir.Text.Length <= 0)
+            if (projectDir.Text.Trim().Length <= 0)
             {
                 labError.Text = "项目描述不能为空";
                 return;
             }
-            if (txtPLAN.Text.Length <= 0)
+            if (txtPLAN.Text.Trim().Length <= 0)
             {
                 labError.Text = "项目预算不能为空";
                 return;
             }
-            if (txtDIR.Text.Length <= 0)
+            if (txtDIR.Text.Trim().Length <= 0)
             {
                 labError.Text = "受助人描述不能为空";
                 return;
@@ -431,5 +431,5 @@ namespace CL.Utility.Web.BasicData
             dgData.CurrentPageIndex = e.NewPageIndex;
             databind(ViewState["now"].ToString());
         }
-    }
+}
 }

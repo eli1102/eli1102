@@ -62,21 +62,40 @@ public partial class Basic201512_经办单位增加 : System.Web.UI.Page
 
     protected void submit_Click(object sender, EventArgs e)
     {
-        if (TEL.Text.Length <= 0)
+        if (benfactorFrom.Text.Length <= 0)
         {
-            LabelError.Text = "联系方式不能为空";
+            LabelError.Text = "经办单位名称不能为空";
+            return;
         }
-        if (contactPerson.Text.Length <= 0)
-        {
-            LabelError.Text = "联系人不能为空";
+        if (benfactorFrom.Text.Length > 0)
+        {//判断是否重复
+            string sqldate = string.Format("select * from e_handlingunit where benfactorFrom='{0}'", benfactorFrom.Text.ToString());
+
+            mysqlconn mys = new mysqlconn();
+            MySqlDataAdapter sda = new MySqlDataAdapter(sqldate, mys.getmysqlcon());
+            DataSet ds = MySqlHelper.ExecuteDataset(mys.getmysqlcon(), sqldate);
+            DataView dv = new DataView(ds.Tables[0]);
+            if (dv.Count > 0)
+            {
+                //LabelError.ForeColor = System.Drawing.Color.Red;
+                LabelError.Text = "该经办单位名称已存在！";
+                return;
+            }
         }
         if (address.Text.Length <= 0)
         {
             LabelError.Text = "经办单位地址不能为空";
+            return;
         }
-        if (benfactorFrom.Text.Length <= 0)
+        if (contactPerson.Text.Length <= 0)
         {
-            LabelError.Text = "经办单位名称不能为空";
+            LabelError.Text = "联系人不能为空";
+            return;
+        }
+        if (TEL.Text.Length <= 0)
+        {
+            LabelError.Text = "联系方式不能为空";
+            return;
         }
         if (TEL.Text.Length > 0 && contactPerson.Text.Length > 0 && address.Text.Length > 0 && benfactorFrom.Text.Length > 0)
         {

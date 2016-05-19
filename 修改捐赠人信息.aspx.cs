@@ -54,7 +54,7 @@ public partial class Basic201512_修改捐赠人信息 : System.Web.UI.Page
     {
         //捐助人ID
         lblID.Text = ViewState["IDNow"].ToString();
-        //冠名捐助金列表
+        //冠名慈善捐助金列表
         DataSet ds = MySqlHelper.ExecuteDataset(msq.getmysqlcon(), "select * from e_benfactor where benfactorType=5");
         DataView dv = new DataView(ds.Tables[0]);
         ddlNaming.DataSource = ds;
@@ -70,11 +70,11 @@ public partial class Basic201512_修改捐赠人信息 : System.Web.UI.Page
         ddlBranch.DataBind();
         //捐助人类型
         benfactorType.SelectedValue = strBenfactorType;
-        if(strBenfactorType!="3")//不是自然人
+        if(strBenfactorType!="3")//不是个人
         {
             trSex.Visible = false;
         }
-        else//是自然人
+        else//是个人
         {
             trContact.Visible = false;
         }
@@ -82,13 +82,13 @@ public partial class Basic201512_修改捐赠人信息 : System.Web.UI.Page
         {
             trMoneyboxNo.Visible = false;
         }
-        if(strBenfactorType!="5")//不是冠名捐助金
+        if(strBenfactorType!="5")//不是冠名慈善捐助金
         {
             tbNaming.Visible = false;
             trAge.Visible = false;
             trDeadline.Visible = false;
         }
-        else//是冠名捐助金
+        else//是冠名慈善捐助金
         {
             tbNaming.Visible = false;
             tbDirect.Visible = false;
@@ -227,7 +227,7 @@ public partial class Basic201512_修改捐赠人信息 : System.Web.UI.Page
     //    }
     //    if (benfactorType.SelectedValue == "2")
     //    {
-    //        Lb11.Text = "法人名称：";
+    //        Lb11.Text = "单位名称：";
     //        trSex.Visible = false;
     //        trAge.Visible = false;
     //        trContact.Visible = true;
@@ -281,7 +281,7 @@ public partial class Basic201512_修改捐赠人信息 : System.Web.UI.Page
     //    }
     //    if (benfactorType.SelectedValue == "5")
     //    {
-    //        Lb11.Text = "冠名捐助金名称：";
+    //        Lb11.Text = "冠名慈善捐助金名称：";
     //        trSex.Visible = false;
     //        trAge.Visible = true;
     //        trContact.Visible = true;
@@ -322,7 +322,7 @@ public partial class Basic201512_修改捐赠人信息 : System.Web.UI.Page
                 }
                 labError.Text = "修改成功";
             }
-            if (benfactorType.SelectedValue == "2")//法人
+            if (benfactorType.SelectedValue == "2")//单位
             {
                 string strfaren = string.Format("update e_benfactor set Contacts='{0}',email='{1}',TEL='{3}' where benfactorID='{2}'", Contacts.Text.ToString(), email.Text.ToString(), ViewState["IDNow"].ToString(), TEL.Text.Trim());
                 msq.getmysqlcom(strfaren);
@@ -338,7 +338,7 @@ public partial class Basic201512_修改捐赠人信息 : System.Web.UI.Page
                 }
                 labError.Text = "修改成功";
             }
-            if (benfactorType.SelectedValue == "3")//自然人
+            if (benfactorType.SelectedValue == "3")//个人
             {
                 string strziran = string.Format("update e_benfactor set sex='{0}',email='{1}',TEL='{3}' where benfactorID='{2}'", ddlSex.SelectedValue.ToString(), email.Text.ToString(), ViewState["IDNow"].ToString(), TEL.Text.Trim());
                 msq.getmysqlcom(strziran);
@@ -370,7 +370,7 @@ public partial class Basic201512_修改捐赠人信息 : System.Web.UI.Page
                 }
                 labError.Text = "修改成功";
             }
-            if (benfactorType.SelectedValue == "5")//冠名捐助金
+            if (benfactorType.SelectedValue == "5")//冠名慈善捐助金
             {//更改年限
                 string strgongyi = string.Format("update e_benfactor set Contacts='{0}',email='{1}',namingAge='{2}',deadline='{3}',TEL='{5}' where benfactorID='{4}'", Contacts.Text.ToString(), email.Text.ToString(), lblAge.Text.Trim(), deadline.Text.ToString(), ViewState["IDNow"].ToString(), TEL.Text.Trim());
                 msq.getmysqlcom(strgongyi);

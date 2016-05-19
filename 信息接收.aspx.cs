@@ -34,7 +34,7 @@ public partial class Basic201512_信息接收 : System.Web.UI.Page
             StringBuilder queryString = new StringBuilder();
             queryString.Append("select * from e_info where 1=1 ");
             if(Session["UserName"].ToString()=="admin")
-            {
+            {//管理员可以查看所有用户的全部信息
                 ;
             }
             else
