@@ -27,13 +27,14 @@ public partial class Basic201512_添加受助人 : System.Web.UI.Page
 {
 
     mysqlconn msq = new mysqlconn();
-    string str111 = "select benfactorFrom from e_handlingunit where handlingunitID>1";
+    //string str111 = "select benfactorFrom from e_handlingunit where benfactorFrom='" + Session["benfactorFrom"] + "'";
 
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)//页面首次加载
         {
-            databind();
+            //databind();
+            benfactorFrom.Items.Add(Session["benfactorFrom"].ToString());
             mask();
             tablefamily.Visible = false;
         }
@@ -69,15 +70,15 @@ public partial class Basic201512_添加受助人 : System.Web.UI.Page
         title.Enabled = false;
         disaster.Enabled = false;
     }
-    public void databind()
-    {
-        MySqlConnection mysqlcon = msq.getmysqlcon();
-        DataSet ds = MySqlHelper.ExecuteDataset(mysqlcon, str111);
-        DataView dv = new DataView(ds.Tables[0]);
-        benfactorFrom.DataSource = dv;
-        benfactorFrom.DataTextField = "benfactorFrom"; 
-        benfactorFrom.DataBind();
-    }
+    //public void databind()
+    //{
+    //    MySqlConnection mysqlcon = msq.getmysqlcon();
+    //    DataSet ds = MySqlHelper.ExecuteDataset(mysqlcon, str111);
+    //    DataView dv = new DataView(ds.Tables[0]);
+    //    benfactorFrom.DataSource = dv;
+    //    benfactorFrom.DataTextField = "benfactorFrom"; 
+    //    benfactorFrom.DataBind();
+    //}
     protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
     {
         if (CheckBox1.Checked)

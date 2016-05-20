@@ -108,7 +108,7 @@ public partial class Basic201512_捐助人添加 : System.Web.UI.Page
             ddlNaming.DataSource = ds;
             ddlNaming.DataTextField = "benfactorName";
             ddlNaming.DataBind();
-            string strh = string.Format("select * from e_handlingunit where benfactorFrom !='所有机构'");
+            string strh = string.Format("select * from e_handlingunit where benfactorFrom ='" + Session["benfactorFrom"].ToString() + "'");
             DataSet ds1 = MySqlHelper.ExecuteDataset(msq.getmysqlcon(),strh);
             DataView dv1 = new DataView(ds1.Tables[0]);
             ddlBranch.DataSource = dv1;
