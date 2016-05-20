@@ -250,7 +250,7 @@ public partial class Basic201512_查询受助人 : System.Web.UI.Page
         GridView1.HeaderStyle.ForeColor = Color.Blue;
         GridView1.HeaderRow.Cells[9].Visible = false;
         GridView1.BottomPagerRow.Visible = false;
-        tableTitle = "受助人信息";
+        tableTitle = "受助人信息" + DateTime.Now.ToShortDateString().ToString();
         lyf_OutputToExcel.expExcle(this, divPrint, tableTitle);
     }
 }
